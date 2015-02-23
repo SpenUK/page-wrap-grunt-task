@@ -1,5 +1,5 @@
 /*
- * html-page-wrap
+ * page-wrap-grunt-task
  *
  * 2015 Spen Taylor
  *
@@ -13,7 +13,7 @@ module.exports = function(grunt) {
   var fs = require('fs');
   var chalk = require('chalk');
 
-  grunt.registerMultiTask('pagewrap', '-', function() {
+  grunt.registerMultiTask('pagewrap', 'Takes html content pages and wraps them with html from a header and footer file to create static pages.', function() {
 
     var header = (this.data.wrapper && this.data.wrapper.header) ? this.data.wrapper.header : false;
     var footer = (this.data.wrapper && this.data.wrapper.footer) ? this.data.wrapper.footer : false;
