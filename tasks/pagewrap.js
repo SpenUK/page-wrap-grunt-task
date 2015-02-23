@@ -1,27 +1,28 @@
 /*
  * page-wrap-grunt-task
- *
  * 2015 Spen Taylor
- *
  */
+
+ var task = {
+  calledWith: 'pagewrap',
+  description: 'Takes html content pages and wraps them with html from a header and footer file to create static pages.',
+ }
 
 'use strict';
 
 module.exports = function(grunt) {
-
-  var path = require('path');
-  var fs = require('fs');
-  var chalk = require('chalk');
-
-  grunt.registerMultiTask('pagewrap', 'Takes html content pages and wraps them with html from a header and footer file to create static pages.', function() {
+  grunt.registerMultiTask(task.calledWith, task.description, function() {
 
     var header = (this.data.wrapper && this.data.wrapper.header) ? this.data.wrapper.header : false;
     var footer = (this.data.wrapper && this.data.wrapper.footer) ? this.data.wrapper.footer : false;
 
+    // If either the header of the footer files are missing, content is set to '', allowing them to be omitted.
     var headerContents = header ? getContents(header) : '';
     var footerContents = footer ? getContents(footer) : '';
 
       this.files.filter(function(filePair){
+
+        // Explicitly ignoring the header and footer files to avoid producing unwanted pages from these.
         return (filePair.src != header && filePair.src != footer);
       }).forEach(function(filePair){
 
