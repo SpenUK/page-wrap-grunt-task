@@ -4,11 +4,23 @@ PageWrap Grunt Task
 Takes a collection of content pages and wraps them with content from a header and footer file.
 Quite useless in most cases, since you would normally use partials!
 
+## Installation
+
+```shell
+npm install page-wrap-grunt-task --save-dev
+```
+
+Once installed, make sure the task is included in your project's grunt file:
+
+```js
+grunt.loadNpmTasks('grunt-contrib-concat');
+```
+
 ## How to use
 
 Using this task is quite straight forward, set a cwd, src files, destination and a wrappers object that includes both a header and footer file.
 
-Either the header or footer files can be omitted if they are not neededå
+Either the header or footer files can be omitted if they are not needed
 
 Example config:
 
