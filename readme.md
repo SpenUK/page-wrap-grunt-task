@@ -13,7 +13,7 @@ npm install page-wrap-grunt-task --save-dev
 Once installed, make sure the task is included in your project's grunt file:
 
 ```js
-grunt.loadNpmTasks('grunt-contrib-concat');
+grunt.loadNpmTasks('grunt-wrap-grunt-task');
 ```
 
 ## How to use

@@ -1,7 +1,7 @@
 {
   "name": "page-wrap-grunt-task",
   "description": "Takes html content pages and wraps them with html from a header and footer file to create static pages.",
-  "version": "0.1.0",
+  "version": "0.1.02",
   "homepage": "https://github.com/SpenUK/page-wrap-grunt-task",
   "author": {
     "name": "Spen Taylor",
